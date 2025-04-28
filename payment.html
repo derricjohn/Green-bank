@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>International Payment Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="payment-container">
+    <h2>Send Payment Alert</h2>
+    <form id="payment-form">
+      
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="amount">Amount (USD)</label>
+      <input type="number" id="amount" name="amount" required>
+
+      <label for="mobile">Mobile Number (International)</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="+1 123 456 7890" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="bank">Bank Account Number</label>
+      <input type="text" id="bank" name="bank" required>
+
+      <button type="submit">Send Alert</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('payment-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Alert sent to Mobile, Email, and Bank!');
+    });
+  </script>
+</body>
+</html>
