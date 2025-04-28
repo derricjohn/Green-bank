@@ -1,0 +1,12 @@
+const accountSid = 'YOUR_TWILIO_ACCOUNT_SID';   // from Twilio dashboard
+const authToken = 'YOUR_TWILIO_AUTH_TOKEN';      // from Twilio dashboard
+const client = require('twilio')(accountSid, authToken);
+
+client.messages
+  .create({
+    body: 'This is a payment alert from your app!',
+    from: '+YOUR_TWILIO_PHONE_NUMBER', // Twilio number
+    to: '+THE_CUSTOMER_MOBILE_NUMBER'   // Customer's number
+  })
+  .then(message => console.log(message.sid))
+  .catch(error => console.error(error));
