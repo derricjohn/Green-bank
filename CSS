@@ -1,3 +1,11 @@
+function login() {
+  const password = document.getElementById('password').value;
+  if (password === '101010') {
+    window.location.href = 'dashboard.html';
+  } else {
+    document.getElementById('error').innerText = 'Incorrect password.';
+  }
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f8f5;
