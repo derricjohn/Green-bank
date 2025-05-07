@@ -3,6 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Bank Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="green-logo.png" alt="Green Bank Logo" class="logo">
+    <h2>Welcome to Green Bank</h2>
+    <p><strong>Balance:</strong> $79,264.00</p>
+    <form id="transferForm">
+      <input type="text" placeholder="Account Number or IBAN" required>
+      <input type="text" placeholder="Bank Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="number" placeholder="Amount" required>
+      <button type="submit">Send</button>
+    </form>
+    <p id="confirmation" style="color: green;"></p>
+  </div>
+  <script>
+    document.getElementById('transferForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('confirmation').innerText = "Transfer initiated. A confirmation email will be sent shortly.";
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Green Bank Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
